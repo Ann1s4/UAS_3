@@ -31,8 +31,8 @@ include("koneksi.php");
         <img src="images/Modern Initial MB Logo.png" alt="logo Aplikasi" class="img-responsive" style="width: 200px;" />
       </h1>
       <h1>
-        Selamat Datang di
-        <b style="font-family: Futura Md BT">ONAV</b>
+        Selamat Ujian
+        <b style="font-family: Futura Md BT"></b>
       </h1>
       <p style="font-family: Brush Script Std; font-size: 21px">
         Pesan tiket hanya dengan 1 klik

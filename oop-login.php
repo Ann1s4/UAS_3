@@ -5,7 +5,7 @@ class User
 {
     protected $password;
     public $username;
-    public $fullname;
+    public $fullname;//properti
     public function __construct($username,$password, $fullname)
     {
         $this->username = $username;
@@ -13,6 +13,7 @@ class User
         $this->fullname = $fullname;
     }
 }
+
 
 class UserManager extends User
 {
@@ -59,3 +60,16 @@ class Login extends User
         }
     }
 }
+
+
+class Authenticator extends User
+{
+    private $username;
+    public function authenticate()
+    {
+        echo "Otentikasi pengguna '$this->username' sedang berlangsung";
+    }
+}
+$authenticator = new Authenticator('$ship_user', '$ship_password', '$ship_User');
+$authenticator->authenticate();
+?>

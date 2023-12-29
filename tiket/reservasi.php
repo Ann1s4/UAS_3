@@ -13,6 +13,29 @@ if ($data['id_tiket'] == "") {
   $data['kode_tiket'] = "";
   $data['fullname'] = "";
 }
+
+//kelas baru 2 buah object
+Class TicketManager 
+{
+  protected $kodetiket;
+  public $username;
+  public function __construct($username,$kodetiket)
+  {
+    $this->username = $username;
+    $this->kodetiket = $kodetiket;
+  }
+}
+
+Class Autentikasi extends TicketManager
+{
+  public function autentik()
+  {
+    echo "Cetak tiket '$this->username'";
+  }
+}
+$autentikasi = new Autentikasi('$ship_user', '$ship_tiket');
+$autentikasi->autentik()
+
 ?>
 
 <head>
