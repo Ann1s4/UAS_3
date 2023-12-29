@@ -59,33 +59,3 @@ class Login extends User
         }
     }
 }
-
-// Kelas baru untuk polymorphism
-class Authenticator extends User   
-{
-// Membuat kelas baru atau turunan dari kelas 'User' 
-
-    public function authenticate()
-    {
-        echo "Otentikasi untuk pengguna '$this->username' sedang berlangsung...";
-    }
-}
-// Mendefinisikan metode authenticate() dalam kelas Authenticator. Metode ini mencetak pesan otentikasi yang mencakup nama pengguna ($this->username)nilai properti yang diwarisi dari kelas User.
-
-// Contoh penggunaan polymorphism
-$authenticator = new Authenticator('ship_user', 'ship_password', 'Ship User');
-$authenticator->authenticate();
-?>
-<!-- 
-- Membuat objek baru $authenticator dengan memberikan nilai awal untuk properti username, password, dan fullname.
-
-- Memanggil metode authenticate() pada objek $authenticator. Metode ini dicetak untuk menunjukkan pesan otentikasi.
- -->
-
-
-<!--
-- Dalam konsep polymorphism, objek dari kelas turunan dapat dianggap objek dari kelas dasar.
-
-- Objek dari kelas turunan (Authenticator) yakni objeknya itu authenticate dapat dianggap sebagai objek, dari kelas dasar (User), 
-  karena Authenticator adalah turunan dari User.
- -->
